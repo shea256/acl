@@ -1,0 +1,22 @@
+{
+  "agents": {
+    "john.id": {
+      "store": {
+        "size": "default",
+        "local": true
+      },
+      "collections": {
+        "schema.org": {
+          "*": {
+            "mode": "rwx---rwx" // Read, write, and access all directories and enteries
+           }
+        },
+        "fhir.org":{
+          "DiagnosticReport": {
+            "mode": "rwx------" // Read, write, and access only what the agent has created
+          }
+        }
+      }
+    }
+  }
+}
