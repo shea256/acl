@@ -6,15 +6,11 @@
         "local": true
       },
       "collections": {
-        "schema.org": {
-          "*": {
-            "mode": "rwx---rwx" // Read, write, and access all directories and enteries
-           }
-        },
-        "fhir.org":{
-          "DiagnosticReport": {
-            "mode": "rwx------" // Read, write, and access only what the agent has created
-          }
+        "schema.org:*": {
+          "mode": "rwx---rwx"
+        }
+        "fhir.org:DiagnosticReport": {
+          "mode": "rwx------"
         }
       }
     }
